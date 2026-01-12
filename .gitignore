@@ -48,3 +48,9 @@ weasis_*.snap
 #comlile
 build-dist
 
+# Web module
+weasis-web/node_modules/
+weasis-web/dist/
+weasis-web/.vite/
+weasis-web/*.local
+

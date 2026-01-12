@@ -1,0 +1,33 @@
+{
+  "name": "weasis-web",
+  "version": "1.0.0",
+  "description": "Weasis DICOM Viewer - WebAssembly/Web Version",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "dicom-parser": "^1.8.21"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.11"
+  },
+  "keywords": [
+    "dicom",
+    "medical-imaging",
+    "wasm",
+    "webassembly",
+    "viewer",
+    "pacs"
+  ],
+  "license": "EPL-2.0 OR Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nroduit/Weasis.git"
+  }
+}
