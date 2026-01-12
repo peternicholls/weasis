@@ -10,16 +10,14 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@cornerstonejs/core": "^1.79.4",
-    "@cornerstonejs/tools": "^1.79.4",
-    "@cornerstonejs/dicom-image-loader": "^1.79.4",
-    "dicom-parser": "^1.8.21",
-    "dcmjs": "^0.33.3"
+    "dicom-parser": "^1.8.21"
   },
   "devDependencies": {
     "@types/node": "^20.11.5",
     "typescript": "^5.3.3",
-    "vite": "^5.0.11"
+    "vite": "^5.0.11",
+    "vite-plugin-top-level-await": "^1.6.0",
+    "vite-plugin-wasm": "^3.5.0"
   },
   "keywords": [
     "dicom",

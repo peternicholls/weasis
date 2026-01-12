@@ -63,16 +63,15 @@ The built files will be in the `dist/` directory.
 
 - **TypeScript**: Type-safe development
 - **Vite**: Fast build tool and dev server
-- **Cornerstone.js**: Medical imaging library (to be integrated)
-- **dicom-parser**: DICOM file parsing
-- **dcmjs**: DICOM utilities
+- **dicom-parser**: DICOM file parsing (currently installed)
+- **Cornerstone.js**: Medical imaging library (planned - has WASM dependency issues)
+- **dcmjs**: DICOM utilities (planned)
 
 ## Architecture
 
 ```
 weasis-web/
-├── public/
-│   └── index.html          # Main HTML file
+├── index.html              # Main HTML file (root level for Vite)
 ├── src/
 │   ├── components/         # UI components (future)
 │   ├── services/           # Business logic services
@@ -83,9 +82,11 @@ weasis-web/
 │   ├── utils/              # Utility functions
 │   │   └── DicomUtils.ts
 │   └── main.ts             # Application entry point
+├── dist/                   # Build output (generated)
 ├── package.json
 ├── tsconfig.json
-└── vite.config.ts
+├── vite.config.ts
+└── pom.xml                 # Optional Maven integration
 ```
 
 ## Comparison with Desktop Weasis
