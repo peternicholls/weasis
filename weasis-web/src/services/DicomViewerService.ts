@@ -39,7 +39,7 @@ export class DicomViewerService {
     // Check file extension (basic check)
     const fileName = file.name.toLowerCase();
     if (!fileName.endsWith('.dcm') && !fileName.endsWith('.dicom')) {
-      console.warn('File does not have .dcm or .dicom extension:', fileName);
+      throw new Error(`Invalid file type: ${fileName}. Only .dcm and .dicom files are supported.`);
     }
     
     // Check file size (avoid loading extremely large files)

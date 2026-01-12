@@ -11,15 +11,8 @@ export class DicomUtils {
    * Parse DICOM file and extract metadata
    */
   static async parseDicomFile(file: File): Promise<DicomMetadata> {
-    // TODO: Implement DICOM parsing using dicom-parser
-    // This is a placeholder implementation
-    
-    return {
-      patientName: 'Unknown',
-      patientId: 'Unknown',
-      studyDate: new Date().toISOString().split('T')[0],
-      modality: 'Unknown',
-    };
+    // NOTE: This method is intentionally unimplemented to avoid returning misleading placeholder data.
+    throw new Error('Not implemented');
   }
 
   /**

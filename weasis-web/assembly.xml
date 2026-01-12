@@ -15,18 +15,10 @@
   <fileSets>
     <!-- Include the built web application from dist/ -->
     <fileSet>
-      <directory>${project.basedir}/dist</directory>
-      <outputDirectory>/</outputDirectory>
-      <includes>
-        <include>**/*</include>
-      </includes>
-    </fileSet>
-    
-    <!-- Include README -->
-    <fileSet>
       <directory>${project.basedir}</directory>
       <outputDirectory>/</outputDirectory>
       <includes>
+        <include>dist/**/*</include>
         <include>README.md</include>
       </includes>
     </fileSet>

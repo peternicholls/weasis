@@ -166,9 +166,14 @@
         
         .upload-btn {
             background: #4a9eff;
-            border-color: #4a9eff;
+            border: 1px solid #4a9eff;
             font-size: 16px;
             padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            color: #fff;
+            display: inline-block;
+            transition: all 0.2s;
         }
         
         .upload-btn:hover {
@@ -215,9 +220,9 @@
                     <p>
                         To get started, click "Open DICOM" to load DICOM images from your local filesystem.
                     </p>
-                    <button class="upload-btn" onclick="document.getElementById('fileInput').click()">
+                    <label class="upload-btn" for="fileInput">
                         Open DICOM Files
-                    </button>
+                    </label>
                 </div>
             </div>
         </div>
