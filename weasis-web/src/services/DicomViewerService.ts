@@ -31,6 +31,23 @@ export class DicomViewerService {
   async loadDicomFile(file: File): Promise<void> {
     console.log('Loading DICOM file:', file.name);
     
+    // Basic validation
+    if (!file) {
+      throw new Error('No file provided');
+    }
+    
+    // Check file extension (basic check)
+    const fileName = file.name.toLowerCase();
+    if (!fileName.endsWith('.dcm') && !fileName.endsWith('.dicom')) {
+      console.warn('File does not have .dcm or .dicom extension:', fileName);
+    }
+    
+    // Check file size (avoid loading extremely large files)
+    const maxSize = 500 * 1024 * 1024; // 500 MB limit
+    if (file.size > maxSize) {
+      throw new Error(`File too large: ${(file.size / 1024 / 1024).toFixed(2)} MB (max: 500 MB)`);
+    }
+    
     // TODO: Implement actual DICOM file loading
     // This will require:
     // 1. Read file as ArrayBuffer

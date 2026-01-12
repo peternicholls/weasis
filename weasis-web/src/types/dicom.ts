@@ -30,7 +30,7 @@ export interface DicomMetadata {
   studyInstanceUID?: string;
   seriesInstanceUID?: string;
   sopInstanceUID?: string;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 export interface DicomSeries {

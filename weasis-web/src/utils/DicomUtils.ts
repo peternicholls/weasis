@@ -39,7 +39,13 @@ export class DicomUtils {
   }
 
   /**
-   * Apply window/level to pixel data
+   * Apply window/level transformation to pixel data
+   * 
+   * @param pixelData - Input pixel values (16-bit unsigned)
+   * @param windowWidth - Width of the display window
+   * @param windowCenter - Center of the display window
+   * @returns RGBA pixel data (4 bytes per pixel: R, G, B, A) as Uint8ClampedArray
+   *          Suitable for use with Canvas ImageData
    */
   static applyWindowLevel(
     pixelData: Uint16Array,
