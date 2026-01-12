@@ -1,0 +1,34 @@
+<assembly xmlns="http://maven.apache.org/ASSEMBLY/2.2.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.2.0 
+  https://maven.apache.org/xsd/assembly-2.2.0.xsd">
+  
+  <id>web-dist</id>
+  
+  <formats>
+    <format>zip</format>
+    <format>tar.gz</format>
+  </formats>
+  
+  <includeBaseDirectory>false</includeBaseDirectory>
+  
+  <fileSets>
+    <!-- Include the built web application from dist/ -->
+    <fileSet>
+      <directory>${project.basedir}/dist</directory>
+      <outputDirectory>/</outputDirectory>
+      <includes>
+        <include>**/*</include>
+      </includes>
+    </fileSet>
+    
+    <!-- Include README -->
+    <fileSet>
+      <directory>${project.basedir}</directory>
+      <outputDirectory>/</outputDirectory>
+      <includes>
+        <include>README.md</include>
+      </includes>
+    </fileSet>
+  </fileSets>
+</assembly>

@@ -5,6 +5,7 @@
 ## Table of Contents
 - [About Weasis](#about-weasis)
 - [Getting Started](#getting-started)
+- [Web Version (WASM)](#web-version-wasm)
 - [Release History](#release-history)
 - [Build Weasis](#build-weasis)
 - [General Features](#general-features)
@@ -22,6 +23,32 @@
 * [Getting Started](https://nroduit.github.io/en/getting-started)
 * [Download binary releases](https://nroduit.github.io/en/getting-started/download-dicom-viewer)
 * [Live Demo with different datasets](https://nroduit.github.io/en/demo)
+
+## Web Version (WASM)
+
+🆕 **Experimental WebAssembly Edition**
+
+A new web-based version of Weasis is under development in the `weasis-web/` directory. This version runs entirely in modern web browsers using WebAssembly and modern web technologies.
+
+**Status**: Proof-of-concept (not production-ready)
+
+* **Documentation**: See [weasis-web/README.md](weasis-web/README.md)
+* **Conversion Guide**: [WASM_CONVERSION_GUIDE.md](WASM_CONVERSION_GUIDE.md)
+* **Integration**: [INTEGRATION.md](INTEGRATION.md)
+
+**Key Differences**:
+- No installation required (runs in browser)
+- Built with TypeScript and Vite
+- Uses Cornerstone.js for DICOM rendering
+- Limited feature set (under development)
+- Separate from desktop version
+
+To try it:
+```bash
+cd weasis-web
+npm install
+npm run dev
+```
 
 ## Release History
 See [CHANGELOG](CHANGELOG.md)

@@ -1,0 +1,70 @@
+/**
+ * DICOM Utilities
+ * 
+ * Helper functions for DICOM file handling and parsing.
+ */
+
+import type { DicomMetadata } from '../types/dicom';
+
+export class DicomUtils {
+  /**
+   * Parse DICOM file and extract metadata
+   */
+  static async parseDicomFile(file: File): Promise<DicomMetadata> {
+    // TODO: Implement DICOM parsing using dicom-parser
+    // This is a placeholder implementation
+    
+    return {
+      patientName: 'Unknown',
+      patientId: 'Unknown',
+      studyDate: new Date().toISOString().split('T')[0],
+      modality: 'Unknown',
+    };
+  }
+
+  /**
+   * Convert DICOM file to ImageData for rendering
+   */
+  static async dicomToImageData(file: File): Promise<ImageData> {
+    // TODO: Implement conversion using dicom-parser and Cornerstone
+    throw new Error('Not implemented');
+  }
+
+  /**
+   * Extract pixel data from DICOM file
+   */
+  static async extractPixelData(arrayBuffer: ArrayBuffer): Promise<Uint16Array> {
+    // TODO: Implement pixel data extraction
+    throw new Error('Not implemented');
+  }
+
+  /**
+   * Apply window/level to pixel data
+   */
+  static applyWindowLevel(
+    pixelData: Uint16Array,
+    windowWidth: number,
+    windowCenter: number
+  ): Uint8ClampedArray {
+    // TODO: Implement window/level transformation
+    const output = new Uint8ClampedArray(pixelData.length * 4);
+    
+    // Placeholder: simple linear mapping
+    const min = windowCenter - windowWidth / 2;
+    const max = windowCenter + windowWidth / 2;
+    
+    for (let i = 0; i < pixelData.length; i++) {
+      let value = pixelData[i];
+      value = ((value - min) / (max - min)) * 255;
+      value = Math.max(0, Math.min(255, value));
+      
+      const idx = i * 4;
+      output[idx] = value;     // R
+      output[idx + 1] = value; // G
+      output[idx + 2] = value; // B
+      output[idx + 3] = 255;   // A
+    }
+    
+    return output;
+  }
+}
