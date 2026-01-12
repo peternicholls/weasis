@@ -8,6 +8,7 @@
 
 export class DicomViewerService {
   private viewport: HTMLElement | null = null;
+  // @ts-expect-error - Will be used when actual DICOM loading is implemented
   private currentImageId: string | null = null;
 
   async init(): Promise<void> {

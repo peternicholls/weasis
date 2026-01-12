@@ -10,7 +10,7 @@ export class DicomUtils {
   /**
    * Parse DICOM file and extract metadata
    */
-  static async parseDicomFile(file: File): Promise<DicomMetadata> {
+  static async parseDicomFile(_file: File): Promise<DicomMetadata> {
     // NOTE: This method is intentionally unimplemented to avoid returning misleading placeholder data.
     throw new Error('Not implemented');
   }
@@ -18,7 +18,7 @@ export class DicomUtils {
   /**
    * Convert DICOM file to ImageData for rendering
    */
-  static async dicomToImageData(file: File): Promise<ImageData> {
+  static async dicomToImageData(_file: File): Promise<ImageData> {
     // TODO: Implement conversion using dicom-parser and Cornerstone
     throw new Error('Not implemented');
   }
@@ -26,7 +26,7 @@ export class DicomUtils {
   /**
    * Extract pixel data from DICOM file
    */
-  static async extractPixelData(arrayBuffer: ArrayBuffer): Promise<Uint16Array> {
+  static async extractPixelData(_arrayBuffer: ArrayBuffer): Promise<Uint16Array> {
     // TODO: Implement pixel data extraction
     throw new Error('Not implemented');
   }
